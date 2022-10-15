@@ -41,6 +41,13 @@ const Tweather = () => {
             </View>
         )
     }
+    else if(weatherData === null) {
+        return (
+          <View style={styles.container}>
+            <Text>City Name Not Found</Text>
+          </View>
+        );
+    }
 
 
   return (
