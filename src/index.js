@@ -12,6 +12,7 @@ const Tweather = () => {
     //fetch weather data
     const fetchWeatherData = async (cityName) => {
         try {
+            setLoaded(false);
             const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`);
             if(response.status == 200) {
                 const data = await response.json();
@@ -20,7 +21,7 @@ const Tweather = () => {
             else {
                 setWeatherData(null);
             }
-            setLoaded(false);
+            setLoaded(true);
         }
         catch(e) {
             Alert.alert('Error', e.message)
@@ -47,7 +48,7 @@ const Tweather = () => {
         <View style={styles.header}>
             <Text style={styles.headerTitle}>Tweather</Text>
         </View>
-        <WeatherInfo weatherData={weatherData} />
+        <WeatherInfo weatherData={weatherData} fetchWeatherData={fetchWeatherData} />
     </View>
   )
 }
