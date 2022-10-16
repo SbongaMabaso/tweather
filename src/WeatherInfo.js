@@ -107,12 +107,13 @@ const styles = StyleSheet.create({
     extraInfo: {
         flexDirection: 'row',
         justifyContent: 'center',
-        padding: 7,
+        padding: 10,
     },
     info: {
         width: Dimensions.get('screen').width/2.5,
         backgroundColor: '#d0eafa',
         padding: 10,
+        marginLeft: 10,
         borderRadius: 15,
         justifyContent: 'center',
     },
