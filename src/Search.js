@@ -8,7 +8,7 @@ const SearchBar = ({ fetchWeatherData }) => {
   return (
     <View style={styles.serachbar}>
       <TextInput
-        placeholder='Seach City'
+        placeholder='Search City'
         value={cityName}
         onChangeText={(text) => setCityName(text)}
       />

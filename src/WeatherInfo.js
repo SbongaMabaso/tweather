@@ -21,8 +21,9 @@ const WeatherInfo = ({weatherData, fetchWeatherData}) => {
         </View>
         <View style={styles.logo}>
             {/* Add your logo */}
-            <Text>{temp} °C</Text>
+            {/* <Text style={styles.tempInfo}>{temp} °C</Text> */}
         </View>
+        <Text style={styles.tempInfo}>{temp} °C</Text>
         <Text style={styles.description}>{description}</Text>
 
         <View style={styles.extraInfo}>
@@ -90,6 +91,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContext: 'space-around',
+    },
+    tempInfo: {
+        textAlign: 'center',
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 10,
     },
     description: {
         textAlign: 'center',
